@@ -1,0 +1,19 @@
+{
+    "name": "Kilindi Traders Dev Container",
+    "dockerComposeFile": ["docker-compose.yml"],
+    "service": "app",
+    "workspaceFolder": "/workspace",
+    "postCreateCommand": "composer install && php artisan key:generate",
+    "forwardPorts": [8000],
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "bmewburn.vscode-intelephense-client",
+                "felixfbecker.php-debug",
+                "esbenp.prettier-vscode",
+                "eamodio.gitlens"
+            ]
+        }
+    },
+    "remoteUser": "vscode"
+}
